@@ -1,8 +1,36 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
-layout: home
-description: Nachine Learning Portfolio & Blog 
-background: 'img/bg_img.jpg'
+layout: page
+title: Kiran BG
+description: Machine Learning Portfolio & Blog 
+background: '/img/bg_img.jpg'
 ---
+{% for post in paginator.posts %}
+<div class="post-preview">
+    <a href="{{ post.url | prepend: site.baseurl }}">
+        <h2 class="post-title">
+            {{ post.title }}
+        </h2>
+        {% if post.subtitle %}
+        <h3 class="post-subtitle">
+            {{ post.subtitle }}
+        </h3>
+        {% endif %}
+    </a>
+    <p class="post-meta">Posted by {{ post.author }} on {{ post.date | date: "%B %-d, %Y" }}</p>
+</div>
+<hr>
+{% endfor %}
+
+<!-- Pager -->
+<div class="clearfix">
+{% if paginator.total_pages > 1 %}
+<ul class="pager">
+    {% if paginator.previous_page %}
+        <a class="btn btn-primary float-left" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top">&larr; Newer<span class="d-none d-md-inline"> Posts </span> </a>
+    {% endif %}
+    {% if paginator.next_page %}
+        <a class="btn btn-primary float-right" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top">Older<span class="d-none d-md-inline"> Posts &rarr;</span> </a>
+    {% endif %}
+</ul>
+{% endif %}
+</div>
