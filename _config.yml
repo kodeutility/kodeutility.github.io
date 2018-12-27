@@ -6,9 +6,12 @@ baseurl:           ""
 url:               "http://kodeutility.github.io"
 
 # Social Profiles
-twitter_username:  
+twitter_username:  kodeutility
 github_username:   kodeutility
 facebook_username: 
+email_id: kodeutility@gmail.com
+linkedin_username: kiran-bg-012371167
+medium_username: kodeutility
 
 # Build settings
 markdown:          kramdown
