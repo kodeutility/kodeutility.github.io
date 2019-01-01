@@ -23,14 +23,12 @@ background: '/img/bg_img.jpg'
 
 <!-- Pager -->
 <div class="clearfix">
-{% if paginator.total_pages > 1 %}
-<ul class="pager">
+    {% if paginator.total_pages > 1 %}
     {% if paginator.previous_page %}
-        <a class="btn btn-primary float-left" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top">&larr; Newer<span class="d-none d-md-inline"> Posts </span> </a>
+        <a class="btn btn-primary float-left" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top">&larr; Newer<span class="d-none d-md-inline"> Posts</span> </a>
     {% endif %}
     {% if paginator.next_page %}
-        <a class="btn btn-primary float-right" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top">Older<span class="d-none d-md-inline"> Posts &rarr;</span> </a>
+        <a class="btn btn-primary float-right" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top">Older<span class="d-none d-md-inline"> Posts</span> &rarr;</a>
     {% endif %}
-</ul>
-{% endif %}
+    {% endif %}
 </div>
