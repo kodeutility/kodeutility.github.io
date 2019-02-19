@@ -1,6 +1,6 @@
 title:             Kiran BG
 email:             kodeutility@gmail.com
-description:       Machine Learning Portfolio & Blog
+description:       Portfolio & Tech Blog
 author:            Kiran BG
 baseurl:           ""
 url:               "http://kodeutility.github.io"
@@ -8,7 +8,7 @@ url:               "http://kodeutility.github.io"
 # Social Profiles
 twitter_username:  kodeutility
 github_username:   kodeutility
-facebook_username: 
+facebook_username:
 email_id: kodeutility@gmail.com
 linkedin_username: kiran-bg-012371167
 medium_username: kodeutility
