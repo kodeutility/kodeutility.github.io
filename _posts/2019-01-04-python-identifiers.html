@@ -1,0 +1,49 @@
+---
+layout: post
+title: "Python - Identifiers"
+subtitle: ""
+background: '/img/python_bg.jpg'
+---
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=scm&amp;skin=sunburst"></script>
+<p>Identifier is the name given to entities like class, functions, variables etc.
+  in a programming language. It helps differentiating one entity from another.</p>
+
+<p>Rules for writing identifiers:</p>
+<ul>
+  <li>Identifiers can be a combination of letters in lowercase (a to z) or uppercase (A to Z) or digits (0 to 9) or an underscore ' _ '</li>
+  <li>An identifier cannot start with a digit</li>
+  <li>Keywords cannot be used as identifiers</li>
+  <li>No special characters ( !, @, #, $, %, ^, &, *, ~ ) are allowed except underscore ' _ ' for naming an identifier</li>
+  <li>Identifier can be of any length. No limit</li>
+  <li>Python language is case sensitive i.e python , Python, PYTHON are considered as different identifiers</li>
+</ul>
+
+<p>TIP</p>
+<ul>
+  <li>Name your variable that make sense to the task it does.</li>
+  <li>If there are multiple words use underscore to separate each word</li>
+</ul>
+
+<pre class="prettyprint">
+#Bad practice
+q=10
+
+#Good practice
+quantity=10
+
+#Good practice to write multiple words
+students_with_grades_above_90 = 20
+good_students = True
+
+#Valid identifiers
+variable_1
+A_Constant
+PIE
+_test
+
+#Invalid identifiers
+5_names
+one_$
+if
+else  
+</pre>
