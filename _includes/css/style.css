@@ -6,5 +6,5 @@
 
 pre.prettyprint{
     overflow: scroll;
-    white-space: pre;
+    white-space: nowrap;
 }
