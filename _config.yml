@@ -16,7 +16,7 @@ medium_username: kodeutility
 # Build settings
 markdown:          kramdown
 theme: jekyll-theme-clean-blog
-paginate:          5
+paginate:          15
 paginate_path:     "/page:num/"
 plugins:
   - jekyll-feed
