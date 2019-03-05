@@ -3,3 +3,6 @@
     overflow-x: auto;
     white-space: nowrap;
 }
+.codescroll{
+  overflow-x: auto;
+}
