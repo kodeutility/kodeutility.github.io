@@ -1,10 +1,1 @@
-.table {
-    width: 30em;
-    overflow-x: auto;
-    white-space: nowrap;
-}
 
-pre.prettyprint{
-    overflow: scroll;
-    white-space: nowrap;
-}
