@@ -20,3 +20,30 @@ background: '/img/python_bg.jpg'
   <li>Python has 4 builtin data structures . List, Tuple, Set, Dictionary.</li>
   <li>Python language is case sensitive i.e python , Python, PYTHON are considered as different words.</li>
 </ul>
+
+<h3>Python Architecture</h3>
+
+<p>Python architecture and its usual flow.</p>
+<p>There are four steps that Python takes when we run python code.
+  <ol>
+    <li>Lexing</li>
+    <li>Parsing</li>
+    <li>Compiling</li>
+    <li>Interpreting</li>
+  </ol>
+</p>
+<p><strong>Lexing:</strong> Lexing is breaking the line of code we typed into tokens.</p>
+
+<p><strong>Parsing:</strong> The parser takes those tokens and generates a structure that shows their relationship to each other.
+For Python and many other langauges, this is the Abstract Syntax Tree (or AST).Think of your code as a tree.
+ The top level is the root, a function might be a branch, a class is a branch and the class methods branch off that.
+The statements are leaves within a branch.</p>
+
+<p><strong>Compiling:</strong> The compiler takes the AST and turns it into one (or more) code objects(ByteCode).
+Bytecode is the result of compiling source code written in a language.
+Bytecode is the intermediary language between machine code (01010101) and the syntax tree.
+The Byte-code sequence is the thing cached in .pyc files. </p>
+
+<p><strong>Interpreting:</strong>  It takes the byte-code sequence and converts it into machine-specific operations.
+  This is why Python.exe and Python for mac and Linux are all seperate binaries.
+  Some byte codes need OS specific handling and checks. </p>
