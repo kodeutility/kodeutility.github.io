@@ -85,6 +85,10 @@ print(type(z))
   hexadecimal (base 16) and octal (base 8) number systems.
 <br>In Python, we can represent these numbers by appropriately placing a prefix before that number.</p>
 
+<p>Binary number is written using 1 and 0.
+<br>Octal number is written using 0 to 7.
+<br>Hexadeciaml is written using numbers 0 to 9 and letters A-F or a-f.</p>
+
 <div class="table">
   <table class="pure-table">
     <thead>
@@ -132,9 +136,100 @@ print(0o15)
 
 <h3>Type Conversion</h3>
 
-<p>We can convert one type of number into another. This is also known as coercion.</p>
+<p>We can convert one type of number into another. This is also known as coercion.
+We can explicitly convert one number type to another using in-built functions.</p>
+
+<ol>
+  <li><strong>int()</strong>Function returns the integer value of a number.</li>
+  <li><strong>float()</strong>Function returns the float value of a number.</li>
+  <li><strong>complex()</strong>Function returns the complex value of a number.</li>
+  <li><strong>bin()</strong>Function returns the binary value of a number.</li>
+  <li><strong>oct()</strong>Function returns the octal value of a number.</li>
+  <li><strong>hex(): </strong>Function returns the hexadecimal value of a number.</li>
+</ol>
+
+<h3>int()</h3>
+<h6>test.py</h6>
+<pre class="language-python line-numbers">
+<code>int_1 = 5
+int_2 = 5.6
+int_3 = 2+3j
+int_4 = 0b10101
+int_5 = 0o276
+int_6 = 0xAB3E
+
+print(int(int_1))
+
+#It does not round the value. It truncates the value.
+print(int(int_2))
+
+#We can use it on binary numbers
+print(int(int_4))
+
+#We can use it on octal numbers
+print(int(int_5))
+
+#We can use it on hexadecimal numbers
+print(int(int_6))
+
+# we cannot convert complex number top integer.
+print(int(int_3))
+</code></pre>
+
+<h6>Output</h6>
+<pre class="language-none">
+<code>5
+5
+21
+190
+43838
+Traceback (most recent call last):
+  File "C:/Users/Desktop/test.py",  line 23, in <module>
+    print(int(int_3))
+TypeError: can't convert complex to int
+</code></pre>
 
 
+<h3>float()</h3>
+<h6>test.py</h6>
+<pre class="language-python line-numbers">
+<code>float_1 = 5
+float_2 = 5.6
+float_3 = 2+3j
+float_4 = 0b10101
+float_5 = 0o276
+float_6 = 0xAB3E
+
+print(float(float_1))
+
+#It does not round the value. It truncates the value.
+print(float(float_2))
+
+#We can use it on binary numbers
+print(float(float_4))
+
+#We can use it on octal numbers
+print(float(float_5))
+
+#We can use it on hexadecimal numbers
+print(float(float_6))
+
+# we cannot convert complex number top integer.
+print(float(float_3))
+</code></pre>
+
+<h6>Output</h6>
+<pre class="language-none">
+<code>5.0
+5.6
+21.0
+190.0
+43838.0
+Traceback (most recent call last):
+  File "C:/Users/Desktop/test.py", line 23, in <module>
+    print(float(float_3))
+TypeError: can't convert complex to float
+</code></pre>
 
 
 
