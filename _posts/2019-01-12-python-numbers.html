@@ -4,10 +4,10 @@ title: "Python - Numbers"
 subtitle: ""
 background: '/img/python_bg.jpg'
 ---
-<p>There are 3 types of numbers in python integer, float, complex. They are defined as int, float, complex class in python respectively.</p>
+<p>There are 3 types of numbers in python - integer, float, complex. They are defined as int, float, complex class in python respectively.</p>
 <p><strong>Integes</strong> are numbers which do not have decimal point.
 <br><strong>Float</strong> are numbers which have decimal point.
-<br><strong>Complex</strong> are numbers which have real part and imaginary part in the form of x+yi, 
+<br><strong>Complex</strong> are numbers which have real part and imaginary part in the form of x+yj, 
   where 'x' is real part and 'y' is imaginary part</p> 
 <p>We can find the type of a variable using the in-built function <em>type()</em>.</p>
 
@@ -26,15 +26,14 @@ print(type(z))
 
 <h6>Output</h6>
 <pre class="language-none">
-<code><class 'int'>
-<class 'int'>
-<class 'int'>
+<code>&lt;class 'int'&gt;
+&lt;class 'int'&gt;
+&lt;class 'int'&gt;
 </code></pre>
 
 <h3>float</h3>
 <p>Float, or "floating point number" is a number, positive or negative, containing one or more decimals.
 Float can also be scientific numbers with an "e" to indicate the power of 10.</p>
-<h6>test.py</h6>
 
 <h6>test.py</h6>
 <pre class="language-python line-numbers">
@@ -49,16 +48,19 @@ print(type(z))
 
 <h6>Output</h6>
 <pre class="language-none">
-<code><class 'float'>
-<class 'float'>
-<class 'float'>
+<code>&lt;class 'float'&gt;
+&lt;class 'float'&gt;
+&lt;class 'float'&gt;
 </code></pre>
 
 <h3>complex</h3>
+<p>A complex number is a Python number type made of real and imaginary parts. It is represented as x+yj.
+To denote the irrational part we can’t use the letter ‘i’, like you would do on paper.
+Also, it is mandatory to provide a coefficient to the imaginary part.</p>
 
 <h6>test.py</h6>
 <pre class="language-python line-numbers">
-<code>x = 6+5i
+<code>x = 6+5j
 y = 0j
 z = -3j
 
@@ -69,9 +71,9 @@ print(type(z))
 
 <h6>Output</h6>
 <pre class="language-none">
-<code><class 'complex'>
-<class 'complex'>
-<class 'complex'>
+<code>&lt;class 'complex'&gt;
+&lt;class 'complex'&gt;
+&lt;class 'complex'&gt;
 </code></pre>
 
 <h3>Expressing numbers in binary, octal, hexadecimal</h3>
