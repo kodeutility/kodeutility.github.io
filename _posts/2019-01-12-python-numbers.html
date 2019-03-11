@@ -33,7 +33,9 @@ print(type(z))
 
 <h3>float</h3>
 <p>Float, or "floating point number" is a number, positive or negative, containing one or more decimals.
-Float can also be scientific numbers with an "e" to indicate the power of 10.</p>
+Float can also be scientific numbers with an "e" to indicate the power of 10.
+While integers can be of any length, a floating point number is accurate only up to 15 decimal places 
+  (the 16th place is inaccurate).</p>
 
 <h6>test.py</h6>
 <pre class="language-python line-numbers">
@@ -77,5 +79,72 @@ print(type(z))
 </code></pre>
 
 <h3>Expressing numbers in binary, octal, hexadecimal</h3>
+
+<p>Numbers we deal with everyday are decimal (base 10) number system. 
+  But computer programmers (generally embedded programmer) need to work with binary (base 2), 
+  hexadecimal (base 16) and octal (base 8) number systems.
+<br>In Python, we can represent these numbers by appropriately placing a prefix before that number.</p>
+
+<div class="table">
+  <table class="pure-table">
+    <thead>
+        <tr>
+            <th>Number System</th>
+            <th>Prefix</th>
+        </tr>
+    </thead>
+    
+    <tbody>
+    <tr>
+      <td >Binary</td>
+      <td >'0b' or '0B'</td>
+    </tr>
+    <tr class="pure-table-odd">
+      <td >Octal</td>
+      <td >'0o' or '0O'</td>
+    </tr>
+    <tr>
+      <td >Hexadeciaml</td>
+      <td >'0x' or '0X'</td>
+    </tr>
+    </tbody>
+   </table>
+</div>
+
+<h6>test.py</h6>
+<pre class="language-python line-numbers">
+<code># Output: 107
+print(0b1101011)
+
+# Output: 253 (251 + 2)
+print(0xFB + 0b10)
+
+# Output: 13
+print(0o15)
+</code></pre>
+
+<h6>Output</h6>
+<pre class="language-none">
+<code>107
+253
+13
+</code></pre>
+
+<h3>Type Conversion</h3>
+
+<p>We can convert one type of number into another. This is also known as coercion.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
