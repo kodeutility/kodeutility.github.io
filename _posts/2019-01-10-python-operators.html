@@ -248,8 +248,12 @@ not var_1 is False
 </code></pre>
 
 <!---------------------------Bitwise Operators--------------------->
-<h3></h3>
-<p></p>
+<h3>Bitwise Operators</h3>
+<p>Bitwise operators act on operands as if they were string of binary digits. It operates bit by bit, hence the name.
+<br>E.g. 2 is 10 in binary and 7 is 111.
+</p>
+
+<p>Let x = 10 (0000 1010 in binary) and y = 4 (0000 0100 in binary)</p>
 
 <div class="cust-table">
   <table class="pure-table">
@@ -263,32 +267,46 @@ not var_1 is False
     
     <tbody>
     <tr>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td>&amp;</td>
+      <td>Bitwise AND</td>
+      <td>x&amp; y = 0 (0000 0000)</td>
     </tr>
     <tr class="pure-table-odd">
-      <td></td>
-      <td></td>
-      <td></td>
+      <td>|</td>
+      <td>Bitwise OR</td>
+      <td>x | y = 14 (0000 1110)</td>
+      </tr>
+     <tr>
+      <td>~</td>
+      <td>Bitwise NOT</td>
+      <td>~x = -11 (1111 0101)</td>
+    </tr>
+    <tr class="pure-table-odd">
+      <td>^</td>
+      <td>Bitwise XOR</td>
+      <td>x ^ y = 14 (0000 1110)</td>
+      </tr>
+     <tr>
+      <td>&gt;&gt;</td>
+      <td>Bitwise right shift</td>
+      <td>x&gt;&gt; 2 = 2 (0000 0010)</td>
+    </tr>
+    <tr class="pure-table-odd">
+      <td>&lt;&lt;</td>
+      <td>Bitwise left shift</td>
+      <td>x&lt;&lt; 2 = 40 (0010 1000)</td>
       </tr>
     </tbody>
    </table>
 </div>
-
-<h6>test.py</h6>
-<pre class="language-python line-numbers">
-<code>
-</code></pre>
-
-<h6>Output</h6>
-<pre class="language-none">
-<code>
-</code></pre>
 
 <!---------------------------Assignment Operators--------------------->
-<h3></h3>
-<p></p>
+<h3>Assignment Operators</h3>
+<p>Assignment operators are used in Python to assign values to variables.
+<br>num_1 = 5 is a simple assignment operator that assigns the value 5 on the right to the variable num_1 on the left.
+<br>There are various compound operators in Python like num_1 += 5 
+that adds to the variable and later assigns the same. It is equivalent to num_1 = num_1 + 5.
+</p>
 
 <div class="cust-table">
   <table class="pure-table">
@@ -302,32 +320,79 @@ not var_1 is False
     
     <tbody>
     <tr>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td>=</td>
+      <td>x = 5</td>
+      <td>x = 5</td>
     </tr>
     <tr class="pure-table-odd">
-      <td></td>
-      <td></td>
-      <td></td>
+      <td>+=</td>
+      <td>x += 5</td>
+      <td>x = x + 5</td>
       </tr>
+    <tr>
+      <td>-=</td>
+      <td>x -= 5</td>
+      <td>x = x - 5</td>
+    </tr>
+    <tr class="pure-table-odd">
+      <td>*=</td>
+      <td>x *= 5</td>
+      <td>x = x * 5</td>
+    </tr>
+    <tr>
+      <td>/=</td>
+      <td>x /= 5</td>
+      <td>x = x / 5</td>
+    </tr>
+    <tr class="pure-table-odd">
+      <td>%=</td>
+      <td>x %= 5</td>
+      <td>x = x % 5</td>
+    </tr>
+    <tr>
+      <td>//=</td>
+      <td>x //= 5</td>
+      <td>x = x // 5</td>
+    </tr>
+    <tr class="pure-table-odd">
+      <td>**=</td>
+      <td>x **= 5</td>
+      <td>x = x ** 5</td>
+    </tr>
+    <tr>
+      <td>&amp;=</td>
+      <td>x &amp;= 5</td>
+      <td>x = x &amp; 5</td>
+    </tr>
+    <tr class="pure-table-odd">
+      <td>|=</td>
+      <td>x |= 5</td>
+      <td>x = x | 5</td>
+    </tr>
+    <tr>
+      <td>^=</td>
+      <td>x ^= 5</td>
+      <td>x = x ^ 5</td>
+    </tr>
+    <tr class="pure-table-odd">
+      <td>&gt;&gt;=</td>
+      <td>x &gt;&gt;= 5</td>
+      <td>x = x &gt;&gt; 5</td>
+    </tr>
+    <tr>
+      <td>&lt;&lt;=</td>
+      <td>x &lt;&lt;= 5</td>
+      <td>x = x &lt;&lt; 5</td>
+    </tr>
     </tbody>
    </table>
 </div>
-
-<h6>test.py</h6>
-<pre class="language-python line-numbers">
-<code>
-</code></pre>
-
-<h6>Output</h6>
-<pre class="language-none">
-<code>
-</code></pre>
 
 <!---------------------------Identity Operators--------------------->
-<h3></h3>
-<p></p>
+<h3>Special Operators</h3>
+<p><strong>is</strong> and <strong>is not</strong> are the identity operators in Python. 
+They are used to check if two values (or variables) are located on the same part of the memory. 
+Two variables that are equal does not imply that they are identical.</p>
 
 <div class="cust-table">
   <table class="pure-table">
@@ -341,14 +406,14 @@ not var_1 is False
     
     <tbody>
     <tr>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td>is</td>
+      <td>True if the operands are identical (refer to the same object)</td>
+      <td>x is True</td>
     </tr>
     <tr class="pure-table-odd">
-      <td></td>
-      <td></td>
-      <td></td>
+      <td>is not</td>
+      <td>True if the operands are not identical (do not refer to the same object)</td>
+      <td>x is not True</td>
       </tr>
     </tbody>
    </table>
@@ -356,17 +421,38 @@ not var_1 is False
 
 <h6>test.py</h6>
 <pre class="language-python line-numbers">
-<code>
+<code>x_1 = 5
+y_1 = 5
+x_2 = 'Hello'
+y_2 = 'Hello'
+x_3 = [1,2,3]
+y_3 = [1,2,3]
+
+# Output: False
+print(x_1 is not y_1)
+
+# Output: True
+print(x_2 is y_2)
+
+# Output: False
+print(x_3 is y_3)
 </code></pre>
 
 <h6>Output</h6>
 <pre class="language-none">
-<code>
+<code>False
+True
+False
 </code></pre>
+
+<p>x_1 and y_1 are integers of same values, so they are equal as well as identical. Same is the case with x_2 and y_2 (strings).
+<br>
+But x_3 and y_3 are list. They are equal but not identical. It is because interpreter locates them separately in memory although they are equal.</p>
 
 <!---------------------------Membership Operators-------------------->
-<h3></h3>
-<p></p>
+<h3>Membership Operators</h3>
+<p><strong>in</strong> and <strong>not in</strong> are the membership operators in Python. 
+They are used to test whether a value or variable is found in a sequence (string, list, tuple, set and dictionary).</p>
 
 <div class="cust-table">
   <table class="pure-table">
@@ -380,14 +466,14 @@ not var_1 is False
     
     <tbody>
     <tr>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td>in</td>
+      <td>True if value/variable is found in the sequence</td>
+      <td>5 in x</td>
     </tr>
     <tr class="pure-table-odd">
-      <td></td>
-      <td></td>
-      <td></td>
+      <td>not in</td>
+      <td>True if value/variable is not found in the sequence</td>
+      <td>5 not in x</td>
       </tr>
     </tbody>
    </table>
@@ -395,161 +481,26 @@ not var_1 is False
 
 <h6>test.py</h6>
 <pre class="language-python line-numbers">
-<code>
+<code>x = 'Hello world'
+y = {1:'a',2:'b'}
+
+# Output: True
+print('H' in x)
+
+# Output: True
+print('hello' not in x)
+
+# Output: True
+print(1 in y)
+
+# Output: False
+print('a' in y)
 </code></pre>
 
 <h6>Output</h6>
 <pre class="language-none">
-<code>
+<code>True
+True
+True
+False
 </code></pre>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
