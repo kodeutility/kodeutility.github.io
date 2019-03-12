@@ -5,7 +5,16 @@ subtitle: ""
 background: '/img/python_bg.jpg'
 ---
 <p>Most of the time in programming we need to make decisions based on some logic. 
-  If-elif-else are used to make decisions in python.</p>
+  If-elif-else are used to make decisions in python.<br>
+Python supports the usual logical conditions from mathematics:</p>
+<ul>
+  <li>Equals: a == b</li>
+  <li>Not Equals: a != b</li>
+  <li>Less than: a < b</li>
+  <li>Less than or equal to: a <= b</li>
+  <li>Greater than: a > b</li>
+  <li>Greater than or equal to: a >= b</li>
+</ul>
 
 <h3>Python if Syntax</h3>
 <p><em>if test expression:<br>
@@ -117,4 +126,85 @@ Zero
 <code>Enter a number: -3
 Negative number
 </code></pre>
+
+
+<h3>Short Hand If</h3>
+<p>If you have only one statement to execute, you can put it on the same line as the if statement.</p>
+<h6>test.py</h6>
+<pre class="language-python line-numbers">
+<code>num_1 = 33
+num_2 = 200
+if num_2 > num_1: print("num_2 is greater than num_1")
+</code></pre>
+
+<h6>Output</h6>
+<pre class="language-none">
+<code>num_2 is greater than num_1
+</code></pre>
+
+<h3>Short Hand If ... Else</h3>
+<p>If you have only one statement to execute, one for if, and one for else, you can put it all on the same line:</p>
+<h6>test.py</h6>
+<pre class="language-python line-numbers">
+<code>num_1 = 33
+num_2 = 200
+print(num_2) if num_2 > num_1 else print(num_1)
+
+print(num_2) if num_2 < num_1 else print(num_1)
+</code></pre>
+
+<h6>Output</h6>
+<pre class="language-none">
+<code>200
+33
+</code></pre>
+
+<h3>and</h3>
+<p>The <strong>and</strong> keyword is a logical operator, and is used to combine conditional statements:</p>
+<h6>test.py</h6>
+<pre class="language-python line-numbers">
+<code>num_1 = 200
+num_2 = 33
+num_3 = 500
+if num_1 > num_2 and num_3 > num_1:
+    print("Both conditions are True")
+</code></pre>
+
+<h6>Output</h6>
+<pre class="language-none">
+<code>Both conditions are True
+</code></pre>
+
+<h3>or</h3>
+<p>The <strong>or</strong> keyword is a logical operator, and is used to combine conditional statements:</p>
+<h6>test.py</h6>
+<pre class="language-python line-numbers">
+<code>num_1 = 200
+num_2 = 33
+num_3 = 500
+if num_1 > num_2 or num_2 > num_3:
+    print("At least one of the conditions is True")
+</code></pre>
+
+<h6>Output</h6>
+<pre class="language-none">
+<code>At least one of the conditions is True
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
