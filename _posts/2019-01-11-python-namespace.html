@@ -85,6 +85,7 @@ address of Number object 10: 1807966720
 </code></pre>
 
 <p>Let's understand in the form of diagram</p>
+<hr>
 <pre>
 num_1 = 10
 
@@ -114,16 +115,75 @@ num_2 --->| 10 |
 num_1 --->| 15 |
           +----+
 </pre>
+<p>As we see when we create a new variable num_2 and assign value of 10 
+  it just points to the existing value of 10 found in the memory location.
+It does not have to create another object to hold 10 for num_2.This dynamic name binding is powerful.
+Also, a name can hold any kind of value. 
+  <br>Since everything is an object, so are Python functions. 
+  We can associate them with names.</p>
 
+<h6>test.py</h6>
+<pre class="language-python line-numbers">
+<code>identity=id
+print(identity(10))
+</code></pre>
 
+<h6>Output</h6>
+<pre class="language-none">
+<code>1807966720
+</code></pre>
 
+<p>If function does not return anything, we get an object of class <strong>‘NoneType’</strong>. 
+  Of course, None is an object that indicates no value. </p>
 
+<h3>Python Namespaces</h3>
+<p>A namespace in python is a collection of names. 
+  So, a namespace is essentially a mapping of names to corresponding objects.At any instant, 
+  different python namespaces can coexist completely isolated- the isolation ensures that there are no name collisions. 
+  Simply speaking, two namespaces in python can have the same name without facing any problem. 
+  A namespace is implemented as a Python dictionary.</p>
+<p>When we start the interpreter, a python namespace is created for as long as we don’t exist. 
+  This holds all built-in names. It is due to this that python functions like print() and id() are always available. 
+    Also, each module creates its own global namespace in python.</p>
+<p>When you call a function, a local python namespace is created for all the names in it. 
+  A module has a global namespace. 
+  The built-in namespace encloses this.</p>
+<hr>
+<pre>
++--------------------------------------+
+|         Built-in Namespace           |
+|  +--------------------------------+  |
+|  |   Module:Global Namespace      |  |
+|  |  +--------------------------+  |  |
+|  |  |Function:Local Namespcace |  |  |
+|  |  |                          |  |  |
+|  |  |                          |  |  |
+|  |  |                          |  |  |
+|  |  +--------------------------+  |  |
+|  +--------------------------------+  |
++--------------------------------------+
+</pre>
+<hr>
 
+<h3>Variable Scope in Python</h3>
+<p>Through various python namespaces, not each can be accessed from every part of the program. 
+  A namespace is in variable scope in a part of a program, if it lets you access the python namespace without having to use a prefix.</p>
+<p>At any instant, we have at least three nested python scopes:<br>
+<ol>
+  <li>Current function’s variable scope- has local names</li>
+  <li>Module’s variable scope- has global names</li>
+  <li>The outermost variable scope- has built-in names</li>
+</ol>
+</p>
 
-
-
-
-
+<p>This also decides the order of searching for when a reference is made. 
+  The order is- <br>
+<ol>
+  <li>local Python namespace</li>
+  <li>global namespace</li>
+  <li>built-in namespace</li>
+</ol>
+  Also, a nested function creates a nested variable scope inside the outer function’s scope.</p>
 
 
 
