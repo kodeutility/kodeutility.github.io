@@ -459,6 +459,72 @@ They are accessed as list.method()
 </table>
 </div>
 
+<br>
+<h3>List Comprehension</h3>
+<p>List comprehension is an elegant and concise way to create new list in a for loop in one step.
+List comprehension consists of an expression followed by for statement inside square brackets.</p>
 
+<h6>test.py</h6>
+<pre class="language-python line-numbers">
+<code>squares = [ x**2 for x in range(9) ]
+print(squares)
+
+#List comprehension with if condition
+#Checking if number is even
+squares = [ x**2 for x in range(9) if x%2==0 ]
+print(squares)
+
+#List comprehension with if else condition
+#Square if number is even else add 3 to it
+squares = [ x**2 if x%2==0 else x+3 for x in range(9) ]
+print(squares)
+</code></pre>
+
+<h6>Output</h6>
+<pre class="language-none">
+<code>[0, 1, 4, 9, 16, 25, 36, 49, 64]
+[0, 4, 16, 36, 64]
+[0, 4, 4, 6, 16, 8, 36, 10, 64]
+</code></pre>
+
+<br>
+<h3>List Membership Test</h3>
+<p>We can test if an item exists in a list or not, using the keyword <strong>in</strong>.</p>
+<h6>test.py</h6>
+<pre class="language-python line-numbers">
+<code>my_list = ['p','r','o','b','l','e','m']
+
+# Output: True
+print('p' in my_list)
+
+# Output: False
+print('a' in my_list)
+
+# Output: True
+print('c' not in my_list)
+</code></pre>
+
+<h6>Output</h6>
+<pre class="language-none">
+<code>True
+False
+True
+</code></pre>
+
+<br>
+<h3>Iterating Through a List</h3>
+<p>Using a <strong>for</strong> loop we can iterate though each item in a list.</p>
+<h6>test.py</h6>
+<pre class="language-python line-numbers">
+<code>for fruit in ['apple','banana','mango']:
+    print("I like",fruit)
+</code></pre>
+
+<h6>Output</h6>
+<pre class="language-none">
+<code>I like apple
+I like banana
+I like mango
+</code></pre>
 
 
