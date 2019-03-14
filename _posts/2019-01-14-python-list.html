@@ -94,29 +94,87 @@ Traceback (most recent call last):
 TypeError: list indices must be integers or slices, not float
 </code></pre>
 
+<br>
+<h4>Negative indexing</h4>
+<p>Python allows negative indexing for its sequences. 
+The index of -1 refers to the last item, -2 to the second last item and so on.</p>
 
+<hr>
+<div align="center">
+<pre>
+Postitive indexing
++---+---+---+---+---+---+---+---+---+---+---+
+| k | o | d | e | u | t | i | l | i | t | y |
++---+---+---+---+---+---+---+---+---+---+---+
+| 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |10 |
++---+---+---+---+---+---+---+---+---+---+---+
+</pre>
 
+<hr>
+<div align="center">
+<pre>
+Negative indexing
++---+---+---+---+---+---+---+---+---+---+---+
+| k | o | d | e | u | t | i | l | i | t | y |
++---+---+---+---+---+---+---+---+---+---+---+
+|-11|-10|-9 |-8 |-7 |-6 |-5 |-4 |-3 |-2 |-1 |
++---+---+---+---+---+---+---+---+---+---+---+
+</pre>
+  
+<h6>test.py</h6>
+<pre class="language-python line-numbers">
+<code>my_list = ['p','y','t','h','o','n']
 
+print(my_list[-1])
+print(my_list[-5])
+</code></pre>
 
+<h6>Output</h6>
+<pre class="language-none">
+<code>n
+y
+</code></pre>
+<br>
+<h4>slice lists in Python</h4>
+<p>We can access a range of items in a list by using the slicing operator (colon).</p>
+  
+<h6>test.py</h6>
+<pre class="language-python line-numbers">
+<code>my_list = ['k', 'o', 'd', 'e', 'u', 't', 'i', 'l', 'i', 't', 'y']
+# elements 3rd to 5th
+print(my_list[2:5])
 
+# elements beginning to 4th
+print(my_list[:-5])
 
+# elements 6th to end
+print(my_list[5:])
 
+# elements beginning to end
+print(my_list[:])
+print(20*'-')
 
+#negative indexing
+#Even for negative indexing start and move towards right
 
+print(my_list[-10:-4])
+print(my_list[-4:-10])
+print(my_list[-3:])
+print(my_list[:-1])
+</code></pre>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+<h6>Output</h6>
+<pre class="language-none">
+<code>['d', 'e', 'u']
+['k', 'o', 'd', 'e', 'u', 't']
+['t', 'i', 'l', 'i', 't', 'y']
+['k', 'o', 'd', 'e', 'u', 't', 'i', 'l', 'i', 't', 'y']
+--------------------
+['o', 'd', 'e', 'u', 't', 'i']
+[]
+['i', 't', 'y']
+['k', 'o', 'd', 'e', 'u', 't', 'i', 'l', 'i', 't']
+</code></pre>
 
 
 
