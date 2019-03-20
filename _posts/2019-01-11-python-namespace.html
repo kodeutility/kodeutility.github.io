@@ -4,3 +4,203 @@ title: "Python - Namespace"
 subtitle: ""
 background: '/img/python_bg.jpg'
 ---
+<p>Let's check out <strong>Zen of Python</strong></p>
+
+<h6>test.py</h6>
+<pre class="language-python line-numbers">
+<code>import this
+</code></pre>
+
+<h6>Output</h6>
+<pre class="language-none">
+<code>The Zen of Python, by Tim Peters
+
+Beautiful is better than ugly.
+Explicit is better than implicit.
+Simple is better than complex.
+Complex is better than complicated.
+Flat is better than nested.
+Sparse is better than dense.
+Readability counts.
+Special cases aren't special enough to break the rules.
+Although practicality beats purity.
+Errors should never pass silently.
+Unless explicitly silenced.
+In the face of ambiguity, refuse the temptation to guess.
+There should be one-- and preferably only one --obvious way to do it.
+Although that way may not be obvious at first unless you're Dutch.
+Now is better than never.
+Although never is often better than *right* now.
+If the implementation is hard to explain, it's a bad idea.
+If the implementation is easy to explain, it may be a good idea.
+Namespaces are one honking great idea -- let's do more of those!
+</code></pre>
+<p>Last line of "Zen of python" talks about Namespaces. Let's understand about it in this tutorial.</p>
+
+<h3>Python Name</h3>
+<p>Python name is an identifier which we use to access a python object. In python everthing is an object.
+  <br>We use <strong>id()</strong> function to get object's address in RAM.</p>
+
+<h6>test.py</h6>
+<pre class="language-python line-numbers">
+<code>num_1 = 10
+
+print(&quot;Value of num_1:&quot;,num_1)
+
+#Let's print address of variable 'num'
+print(&quot;address/id of num_1 object:&quot;,id(num_1))
+#Let's print address of value 10
+print(&quot;address of Number object 10:&quot;,id(10))
+#Both have same value since num_1 is pointing to Number object 10
+
+print(30*'-')
+
+num_1 += 5
+print(&quot;New value of num_1:&quot;,num_1)
+print(&quot;address/id of new num_1 object:&quot;,id(num_1))
+print(&quot;address of Number object 15:&quot;,id(15))
+#Both have same value since num_1 is now pointing to Number object 15
+
+print(30*'-')
+
+num_2 = 10
+print(&quot;address/id of num_2 object:&quot;,id(num_2))
+print(&quot;address of Number object 10:&quot;,id(10))
+#Notice when num_2 is created with value 10
+#It points to old address of num_1 where Number object 10 is stored
+#It does not create a new value in memory 
+</code></pre>
+
+<h6>Output</h6>
+<pre class="language-none">
+<code>Value of num_1: 10
+address/id of num_1 object: 1807966720
+address of Number object 10: 1807966720
+------------------------------
+New value of num_1: 15
+address/id of new num_1 object: 1807966880
+address of Number object 15: 1807966880
+------------------------------
+address/id of num_2 object: 1807966720
+address of Number object 10: 1807966720
+</code></pre>
+
+<p>Let's understand in the form of diagram</p>
+<hr>
+<div align="center">
+<pre>
+num_1 = 10
+
+          +----+
+num_1 --->| 10 |
+          +----+
+</pre>
+</div> 
+<hr>
+<div align="center">
+<pre>
+num_1 += 5
+
+          +----+
+          | 10 |
+          +----+
+          +----+
+num_1 --->| 15 |
+          +----+
+</pre>
+</div>
+<hr>
+<div align="center">
+<pre>
+num_2 = 10
+
+          +----+
+num_2 --->| 10 |
+          +----+
+          +----+
+num_1 --->| 15 |
+          +----+
+</pre>
+</div>
+<hr>
+    
+<p>As we see when we create a new variable num_2 and assign value of 10 
+  it just points to the existing value of 10 found in the memory location.
+It does not have to create another object to hold 10 for num_2.This dynamic name binding is powerful.
+Also, a name can hold any kind of value. 
+  <br>Since everything is an object, so are Python functions. 
+  We can associate them with names.</p>
+
+<h6>test.py</h6>
+<pre class="language-python line-numbers">
+<code>identity=id
+print(identity(10))
+</code></pre>
+
+<h6>Output</h6>
+<pre class="language-none">
+<code>1807966720
+</code></pre>
+
+<p>If function does not return anything, we get an object of class <strong>‘NoneType’</strong>. 
+  Of course, None is an object that indicates no value. </p>
+
+<h3>Python Namespaces</h3>
+<p>A namespace in python is a collection of names. 
+  So, a namespace is essentially a mapping of names to corresponding objects.At any instant, 
+  different python namespaces can coexist completely isolated- the isolation ensures that there are no name collisions. 
+  Simply speaking, two namespaces in python can have the same name without facing any problem. 
+  A namespace is implemented as a Python dictionary.</p>
+<p>When we start the interpreter, a python namespace is created for as long as we don’t exist. 
+  This holds all built-in names. It is due to this that python functions like print() and id() are always available. 
+    Also, each module creates its own global namespace in python.</p>
+<p>When you call a function, a local python namespace is created for all the names in it. 
+  A module has a global namespace. 
+  The built-in namespace encloses this.</p>
+<hr>
+<div align="center">
+<pre>
++--------------------------------------+
+|         Built-in Namespace           |
+|  +--------------------------------+  |
+|  |   Module:Global Namespace      |  |
+|  |  +--------------------------+  |  |
+|  |  |Function:Local Namespcace |  |  |
+|  |  |                          |  |  |
+|  |  |                          |  |  |
+|  |  |                          |  |  |
+|  |  +--------------------------+  |  |
+|  +--------------------------------+  |
++--------------------------------------+
+</pre>
+</div>
+<hr>
+
+<h3>Variable Scope in Python</h3>
+<p>Through various python namespaces, not each can be accessed from every part of the program. 
+  A namespace is in variable scope in a part of a program, if it lets you access the python namespace without having to use a prefix.</p>
+<p>At any instant, we have at least three nested python scopes:<br>
+<ol>
+  <li>Current function’s variable scope- has local names</li>
+  <li>Module’s variable scope- has global names</li>
+  <li>The outermost variable scope- has built-in names</li>
+</ol>
+</p>
+
+<p>This also decides the order of searching for when a reference is made. 
+  The order is- <br>
+<ol>
+  <li>local Python namespace</li>
+  <li>global namespace</li>
+  <li>built-in namespace</li>
+</ol>
+  Also, a nested function creates a nested variable scope inside the outer function’s scope.</p>
+
+<h5>Lifetime of a namespace :</h5>
+
+<p>A lifetime of a namespace depends upon the scope of objects, if the scope of an object ends, the lifetime of that namespace comes to an end. 
+  Hence, it is not possible to access inner namespace’s objects from an outer namespace.</p>
+
+
+
+

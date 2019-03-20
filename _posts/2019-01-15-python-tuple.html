@@ -4,3 +4,165 @@ title: "Python - tuple"
 subtitle: ""
 background: '/img/python_bg.jpg'
 ---
+A tuple is similar to a list. 
+The difference between the two is that we cannot change the elements of a 
+tuple once it is assigned whereas in a list, elements can be changed.
+
+<h3>Advantages of Tuple over List</h3>
+<p>Since, tuples are quite similiar to lists, both of them are used in similar situations as well.<br>
+There are certain advantages of implementing a tuple over a list. </p>
+<ul>
+  <li>We generally use tuple for heterogeneous (different) datatypes and list for homogeneous (similar) datatypes.</li>
+  <li>Since tuple are immutable, iterating through tuple is faster than with list. So there is a slight performance boost.</li>
+  <li>Tuples that contain immutable elements can be used as key for a dictionary. With list, this is not possible.</li>
+  <li>If you have data that doesn't change, implementing it as tuple will guarantee that it remains write-protected.
+</li>
+</ul>
+
+<h3>Creating a Tuple</h3>
+<p>A tuple is created by placing all the items (elements) inside a parentheses (), separated by comma. 
+  The parentheses are optional but is a good practice to write it.
+   A tuple can have any number of items and they may be of different types (integer, float, list, string etc.).</p>
+
+<h6>test.py</h6>
+<pre class="language-python line-numbers">
+<code># empty tuple
+# Output: ()
+my_tuple = ()
+print(my_tuple)
+
+# tuple having integers
+# Output: (1, 2, 3)
+my_tuple = (1, 2, 3)
+print(my_tuple)
+
+# tuple with mixed datatypes
+# Output: (1, &quot;Hello&quot;, 3.4)
+my_tuple = (1, &quot;Hello&quot;, 3.4)
+print(my_tuple)
+
+# nested tuple
+# Output: (&quot;mouse&quot;, [8, 4, 6], (1, 2, 3))
+my_tuple = (&quot;mouse&quot;, [8, 4, 6], (1, 2, 3))
+print(my_tuple)
+
+# tuple can be created without parentheses
+# also called tuple packing
+# Output: 3, 4.6, &quot;dog&quot;
+
+my_tuple = 3, 4.6, &quot;dog&quot;
+print(my_tuple)
+
+# tuple unpacking is also possible
+# Output:
+# 3
+# 4.6
+# dog
+a, b, c = my_tuple
+print(a)
+print(b)
+print(c)
+
+#We can use tuple unpacking to assign values to multiple
+#variables at once. But the number of values should be equal to variables
+str_1, str_2, str_3 = &quot;one&quot;,&quot;two&quot;,&quot;three&quot;
+print(&quot;Tuple unpacking:&quot;)
+print(str_1)
+print(str_2)
+print(str_3)
+</code></pre>
+
+<h6>Output</h6>
+<pre class="language-none">
+<code>()
+(1, 2, 3)
+(1, 'Hello', 3.4)
+('mouse', [8, 4, 6], (1, 2, 3))
+(3, 4.6, 'dog')
+3
+4.6
+dog
+Tuple unpacking:
+one
+two
+three
+</code></pre>
+
+<p><strong>NOTE:</strong>For creating a tuple with one element, just having one element within parentheses is not enough. 
+  We will need a trailing comma to indicate that it is in fact a tuple.</p>
+
+<h6>test.py</h6>
+<pre class="language-python line-numbers">
+<code># only parentheses is not enough
+# Output: &lt;class 'str'&gt;
+my_tuple = (&quot;hello&quot;)
+print(type(my_tuple))
+
+# need a comma at the end
+# Output: &lt;class 'tuple'&gt;
+my_tuple = (&quot;hello&quot;,)  
+print(type(my_tuple))
+
+# parentheses is optional
+# Output: &lt;class 'tuple'&gt;
+my_tuple = &quot;hello&quot;,
+print(type(my_tuple))
+</code></pre>
+
+<h6>Output</h6>
+<pre class="language-none">
+<code>&lt;class 'str'&gt;
+&lt;class 'tuple'&gt;
+&lt;class 'tuple'&gt;
+</code></pre>
+
+<br>
+<h3>Accessing Elements in a Tuple</h3>
+<p>There are various ways in which we can access the elements of a tuple.</p>
+<h4>Indexing<h4>
+<p>We can use the index operator [] to access an item in a tuple where the index starts from 0. 
+So, a tuple having 6 elements will have index from 0 to 5. 
+  Trying to access an element other that (6, 7,...) will raise an <strong>IndexError</strong>. 
+The index must be an integer, so we cannot use float or other types. This will result into <strong>TypeError</strong>.</p>
+
+<h6>test.py</h6>
+<pre class="language-python line-numbers">
+<code>my_tuple = ('p','e','r','m','i','t')
+
+# Output: 'p'
+print(my_tuple[0])
+
+# Output: 't'
+print(my_tuple[5])
+
+# index must be in range
+# If you uncomment line 14,
+# you will get an error.
+# IndexError: list index out of range
+
+#print(my_tuple[6])
+
+# index must be an integer
+# If you uncomment line 21,
+# you will get an error.
+# TypeError: list indices must be integers, not float
+
+#my_tuple[2.0]
+
+# nested tuple
+n_tuple = (&quot;mouse&quot;, [8, 4, 6], (1, 2, 3))
+
+# nested index
+# Output: 's'
+print(n_tuple[0][3])
+
+# nested index
+# Output: 4
+print(n_tuple[1][1])
+</code></pre>
+
+<h6>Output</h6>
+<pre class="language-none">
+<code>
+</code></pre>
+

@@ -4,3 +4,204 @@ title: "Python - if else"
 subtitle: ""
 background: '/img/python_bg.jpg'
 ---
+<p>Most of the time in programming we need to make decisions based on some logic. 
+  If-elif-else are used to make decisions in python.<br>
+Python supports the usual logical conditions from mathematics:</p>
+<ul>
+  <li>Equals: a == b</li>
+  <li>Not Equals: a != b</li>
+  <li>Less than: a < b</li>
+  <li>Less than or equal to: a <= b</li>
+  <li>Greater than: a > b</li>
+  <li>Greater than or equal to: a >= b</li>
+</ul>
+
+<h3>Python if Syntax</h3>
+<p><em>if test expression:<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;statement(s) </em></p>
+
+<p>The program evaluates the test expression and will execute statement(s) only if the text expression is True.
+If the text expression is False, the statement(s) is not executed.
+<br>
+The body of the if statement is indicated by the indentation. Body starts with an indentation and the first unindented line marks the end.</p>
+
+<h6>test.py</h6>
+<pre class="language-python line-numbers">
+<code>num_1 = 33
+num_2 = 200
+if num_2 > num_1:
+    print("num_2 is greater than num_1")
+</code></pre>
+
+<h6>Output</h6>
+<pre class="language-none">
+<code>num_2 is greater than num_1
+</code></pre>
+
+<h3>Python if...else Syntax</h3>
+<p><em>if test expression:<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;Body of if<br>
+  else:<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;Body of else</em></p>
+
+<p>The if..else statement evaluates test expression and will execute body of if only when test condition is True.
+<br>
+If the condition is False, body of else is executed. Indentation is used to separate the blocks.</p>
+
+<h6>test.py</h6>
+<pre class="language-python line-numbers">
+<code>num_1 = 333
+num_2 = 200
+if num_2 > num_1:
+    print("num_2 is greater than num_1")
+else:
+    print("num_1 is greater than num_2")
+</code></pre>
+
+<h6>Output</h6>
+<pre class="language-none">
+<code>num_1 is greater than num_2
+</code></pre>
+
+<h3>Python if...elif...else Syntax</h3>
+<p><em>if test expression:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;Body of if<br>
+elif test expression:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;Body of elif<br>
+else: <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;Body of else<br>
+  </em></p>
+
+<h6>test.py</h6>
+<pre class="language-python line-numbers">
+<code>num_1 = 200
+num_2 = 200
+if num_2 > num_1:
+    print("num_2 is greater than num_1")
+elif num_1 == num_2:
+    print("num_1 is equal to num_2")
+else:
+    print("num_1 is greater than num_2")
+</code></pre>
+
+<h6>Output</h6>
+<pre class="language-none">
+<code>num_1 is equal to num_2
+</code></pre>
+
+<h3>Python Nested if statements</h3>
+<p>We can have a if...elif...else statement inside another if...elif...else statement. This is called nesting in computer programming.
+<br>
+Any number of these statements can be nested inside one another. Indentation is the only way to figure out the level of nesting. This can get confusing, so must be avoided if we can.
+</p>
+
+<h6>test.py</h6>
+<pre class="language-python line-numbers">
+<code># check if the number is positive, negative or zero 
+
+num = float(input("Enter a number: "))
+if num >= 0:
+    if num == 0:
+        print("Zero")
+    else:
+        print("Positive number")
+else:
+    print("Negative number")
+</code></pre>
+
+<h6>Output 1</h6>
+<pre class="language-none">
+<code>Enter a number: 5
+Positive number
+</code></pre>
+
+<h6>Output 2</h6>
+<pre class="language-none">
+<code>Enter a number: 0
+Zero
+</code></pre>
+
+<h6>Output 3</h6>
+<pre class="language-none">
+<code>Enter a number: -3
+Negative number
+</code></pre>
+
+
+<h3>Short Hand If</h3>
+<p>If you have only one statement to execute, you can put it on the same line as the if statement.</p>
+<h6>test.py</h6>
+<pre class="language-python line-numbers">
+<code>num_1 = 33
+num_2 = 200
+if num_2 > num_1: print("num_2 is greater than num_1")
+</code></pre>
+
+<h6>Output</h6>
+<pre class="language-none">
+<code>num_2 is greater than num_1
+</code></pre>
+
+<h3>Short Hand If ... Else</h3>
+<p>If you have only one statement to execute, one for if, and one for else, you can put it all on the same line:</p>
+<h6>test.py</h6>
+<pre class="language-python line-numbers">
+<code>num_1 = 33
+num_2 = 200
+print(num_2) if num_2 &gt; num_1 else print(num_1)
+print(num_2) if num_2 &lt; num_1 else print(num_1)
+print(5*'-')
+
+num_1 = 33
+num_2 = 200
+print(&quot;Greater&quot;) if num_1 &gt; num_2 else print(&quot;Equals&quot;) if num_1 == num_2 else print(&quot;Lesser&quot;)
+num_1 = 333
+num_2 = 200
+print(&quot;Greater&quot;) if num_1 &gt; num_2 else print(&quot;Equals&quot;) if num_1 == num_2 else print(&quot;Lesser&quot;)
+num_1 = 200
+num_2 = 200
+print(&quot;Greater&quot;) if num_1 &gt; num_2 else print(&quot;Equals&quot;) if num_1 == num_2 else print(&quot;Lesser&quot;)
+</code></pre>
+
+<h6>Output</h6>
+<pre class="language-none">
+<code>200
+33
+-----
+Lesser
+Greater
+Equals
+</code></pre>
+
+<h3>and</h3>
+<p>The <strong>and</strong> keyword is a logical operator, and is used to combine conditional statements:</p>
+<h6>test.py</h6>
+<pre class="language-python line-numbers">
+<code>num_1 = 200
+num_2 = 33
+num_3 = 500
+if num_1 > num_2 and num_3 > num_1:
+    print("Both conditions are True")
+</code></pre>
+
+<h6>Output</h6>
+<pre class="language-none">
+<code>Both conditions are True
+</code></pre>
+
+<h3>or</h3>
+<p>The <strong>or</strong> keyword is a logical operator, and is used to combine conditional statements:</p>
+<h6>test.py</h6>
+<pre class="language-python line-numbers">
+<code>num_1 = 200
+num_2 = 33
+num_3 = 500
+if num_1 > num_2 or num_2 > num_3:
+    print("At least one of the conditions is True")
+</code></pre>
+
+<h6>Output</h6>
+<pre class="language-none">
+<code>At least one of the conditions is True
+</code></pre>
+

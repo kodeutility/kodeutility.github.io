@@ -1,0 +1,506 @@
+---
+layout: post
+title: "Python - Operators"
+subtitle: ""
+background: '/img/python_bg.jpg'
+---
+<p>Operators are special symbols in Python that carry out arithmetic or logical computation. 
+  The value that the operator operates on is called the operand.
+<br>E.g. 2+3 , Here 2 and 3 are operands and + is the operator.
+<br>There are 7 types of operators.</p>
+<ul>
+  <li>Arithmetic Operators</li>
+  <li>Relational Operators</li>
+  <li>Logical Operators</li>
+  <li>Bitwise Operators</li>
+  <li>Assignment Operators</li>
+  <li>Identity Operators</li>
+  <li>Membership Operators</li>
+</ul>
+
+<!---------------------------Arithmetic operators--------------------->
+<h3>Arithmetic Operators</h3>
+
+<p>Arithmetic operators are used to perform mathematical operations like addition, subtraction, multiplication etc.</p>
+
+<div class="cust-table">
+<table class="pure-table">
+    <thead>
+        <tr>
+            <th>Operator</th>
+            <th>Meaning</th>
+            <th>Example</th>
+        </tr>
+    </thead>
+    
+    <tbody>
+    <tr>
+      <td >+</td>
+      <td >Add two operands or unary plus</td>
+      <td >3+2</td>
+    </tr>
+    <tr class="pure-table-odd">
+      <td >-</td>
+      <td >Subtract right operand from the left or unary minus</td>
+      <td >3-2</td>
+    </tr>
+    <tr>
+      <td >*</td>
+      <td >Multiply two operands</td>
+      <td >3*4</td>
+    </tr>
+    <tr class="pure-table-odd">
+      <td >/</td>
+      <td >Divide left operand by the right one (always results into float value)</td>
+      <td >3/4</td>
+    </tr>
+    <tr >
+      <td >%</td>
+      <td >Modulus - remainder of the division of left operand by the right</td>
+      <td >4%3 (raminder of 4/3)</td>
+    </tr>
+    <tr class="pure-table-odd">
+      <td >//</td>
+      <td >Floor division - division that results into whole number adjusted to the left in the number line</td>
+      <td >4//3</td>
+    </tr>
+    <tr >
+      <td >**</td>
+      <td >Exponent - left operand raised to the power of right</td>
+      <td >2**4 (2 to the power 4)</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+  
+  
+<h6>test.py</h6>
+<pre class="language-python line-numbers">
+<code>num_1 = 4
+num_2 = 3
+
+# Output: num_1 + num_2 = 7
+print('num_1 + num_2 =',num_1+num_2)
+
+# Output: num_1 - num_2 = 1
+print('num_1 - num_2 =',num_1-num_2)
+
+# Output: num_1 * num_2 = 12
+print('num_1 * num_2 =',num_1*num_2)
+
+# Output: num_1 / num_2 = 1.333333
+print('num_1 / num_2 =',num_1/num_2)
+
+# Output: num_1 // num_2 = 1
+print('num_1 // num_2 =',num_1//num_2)
+
+# Output: num_1 ** num_2 = 64
+print('num_1 ** num_2 =',num_1**num_2)
+</code></pre>
+
+<h6>Output</h6>
+<pre class="language-none">
+<code>num_1 + num_2 = 7
+num_1 - num_2 = 1
+num_1 * num_2 = 12
+num_1 / num_2 = 1.3333333333333333
+num_1 // num_2 = 1
+num_1 ** num_2 = 64
+</code></pre>
+
+<!---------------------------Relational operators--------------------->
+<h3>Relational/Comparison Operators</h3>
+<p>Comparison operators are used to compare values. It either returns True or False according to the condition.</p>
+
+<div class="cust-table">
+  <table class="pure-table">
+    <thead>
+        <tr>
+            <th>Operator</th>
+            <th>Meaning</th>
+            <th>Example</th>
+        </tr>
+    </thead>
+    
+    <tbody>
+    <tr>
+      <td>&gt;</td>
+      <td>True if left operand is greater than the right</td>
+      <td>3&gt;4</td>
+    </tr>
+    <tr class="pure-table-odd">
+      <td>&lt;</td>
+      <td>True if left operand is less than the right</td>
+      <td>3&lt;4</td>
+      </tr>
+    <tr>
+      <td>==</td>
+      <td>True if both operands are equal</td>
+      <td>3==4</td>
+    </tr>
+    <tr class="pure-table-odd">
+      <td>!=</td>
+      <td>True if operands are not equal</td>
+      <td>3!=4</td>
+      </tr>
+    <tr>
+      <td>&gt;=</td>
+      <td>True if left operand is greater than or equal to the right</td>
+      <td>3&gt;=4</td>
+    </tr>
+    <tr class="pure-table-odd">
+      <td>&lt;=</td>
+      <td>True if left operand is less than or equal to the right</td>
+      <td>3&lt;=4</td>
+      </tr>
+    </tbody>
+   </table>
+</div>
+
+<h6>test.py</h6>
+<pre class="language-python line-numbers">
+<code>num_1 = 10
+num_2 = 12
+
+# Output: num_1 &gt; num_2 is False
+print('num_1 &gt; num_2  is',num_1&gt;num_2)
+
+# Output: num_1 &lt; num_2 is True
+print('num_1 &lt; num_2  is',num_1&lt;num_2)
+
+# Output: num_1 == num_2 is False
+print('num_1 == num_2 is',num_1==num_2)
+
+# Output: num_1 != num_2 is True
+print('num_1 != num_2 is',num_1!=num_2)
+
+# Output: num_1 &gt;= num_2 is False
+print('num_1 &gt;= num_2 is',num_1&gt;=num_2)
+
+# Output: num_1 &lt;= num_2 is True
+print('num_1 &lt;= num_2 is',num_1&lt;=num_2)
+</code></pre>
+
+<h6>Output</h6>
+<pre class="language-none">
+<code>num_1 > num_2  is False
+num_1 < num_2  is True
+num_1 == num_2 is False
+num_1 != num_2 is True
+num_1 >= num_2 is False
+num_1 <= num_2 is True
+</code></pre>
+
+<!---------------------------Logical Operators--------------------->
+<h3>Logical Operators</h3>
+<p>Logical operators are the and, or, not operators.</p>
+
+<div class="cust-table">
+  <table class="pure-table">
+    <thead>
+        <tr>
+            <th>Operator</th>
+            <th>Meaning</th>
+            <th>Example</th>
+        </tr>
+    </thead>
+    
+    <tbody>
+    <tr>
+      <td>and</td>
+      <td>True if both the operands are true</td>
+      <td>x and y</td>
+    </tr>
+    <tr class="pure-table-odd">
+      <td>or</td>
+      <td>True if either of the operands is true</td>
+      <td>x or y</td>
+      </tr>
+    <tr>
+      <td>not</td>
+      <td>True if operand is false (complements the operand)</td>
+      <td>not x</td>
+    </tr>
+    </tbody>
+   </table>
+</div>
+
+<h6>test.py</h6>
+<pre class="language-python line-numbers">
+<code>var_1 = True
+var_2 = False
+
+# Output: var_1 and var_2 is False
+print('var_1 and var_2 is',var_1 and var_2)
+
+# Output: var_1 or var_2 is True
+print('var_1 or var_2 is',var_1 or var_2)
+
+# Output: not var_1 is False
+print('not var_1 is',not var_1)
+</code></pre>
+
+<h6>Output</h6>
+<pre class="language-none">
+<code>var_1 and var_2 is False
+var_1 or var_2 is True
+not var_1 is False
+</code></pre>
+
+<!---------------------------Bitwise Operators--------------------->
+<h3>Bitwise Operators</h3>
+<p>Bitwise operators act on operands as if they were string of binary digits. It operates bit by bit, hence the name.
+<br>E.g. 2 is 10 in binary and 7 is 111.
+</p>
+
+<p>Let x = 10 (0000 1010 in binary) and y = 4 (0000 0100 in binary)</p>
+
+<div class="cust-table">
+  <table class="pure-table">
+    <thead>
+        <tr>
+            <th>Operator</th>
+            <th>Meaning</th>
+            <th>Example</th>
+        </tr>
+    </thead>
+    
+    <tbody>
+    <tr>
+      <td>&amp;</td>
+      <td>Bitwise AND</td>
+      <td>x&amp; y = 0 (0000 0000)</td>
+    </tr>
+    <tr class="pure-table-odd">
+      <td>|</td>
+      <td>Bitwise OR</td>
+      <td>x | y = 14 (0000 1110)</td>
+      </tr>
+     <tr>
+      <td>~</td>
+      <td>Bitwise NOT</td>
+      <td>~x = -11 (1111 0101)</td>
+    </tr>
+    <tr class="pure-table-odd">
+      <td>^</td>
+      <td>Bitwise XOR</td>
+      <td>x ^ y = 14 (0000 1110)</td>
+      </tr>
+     <tr>
+      <td>&gt;&gt;</td>
+      <td>Bitwise right shift</td>
+      <td>x&gt;&gt; 2 = 2 (0000 0010)</td>
+    </tr>
+    <tr class="pure-table-odd">
+      <td>&lt;&lt;</td>
+      <td>Bitwise left shift</td>
+      <td>x&lt;&lt; 2 = 40 (0010 1000)</td>
+      </tr>
+    </tbody>
+   </table>
+</div>
+
+<!---------------------------Assignment Operators--------------------->
+<h3>Assignment Operators</h3>
+<p>Assignment operators are used in Python to assign values to variables.
+<br>num_1 = 5 is a simple assignment operator that assigns the value 5 on the right to the variable num_1 on the left.
+<br>There are various compound operators in Python like num_1 += 5 
+that adds to the variable and later assigns the same. It is equivalent to num_1 = num_1 + 5.
+</p>
+
+<div class="cust-table">
+  <table class="pure-table">
+    <thead>
+        <tr>
+            <th>Operator</th>
+            <th>Meaning</th>
+            <th>Example</th>
+        </tr>
+    </thead>
+    
+    <tbody>
+    <tr>
+      <td>=</td>
+      <td>x = 5</td>
+      <td>x = 5</td>
+    </tr>
+    <tr class="pure-table-odd">
+      <td>+=</td>
+      <td>x += 5</td>
+      <td>x = x + 5</td>
+      </tr>
+    <tr>
+      <td>-=</td>
+      <td>x -= 5</td>
+      <td>x = x - 5</td>
+    </tr>
+    <tr class="pure-table-odd">
+      <td>*=</td>
+      <td>x *= 5</td>
+      <td>x = x * 5</td>
+    </tr>
+    <tr>
+      <td>/=</td>
+      <td>x /= 5</td>
+      <td>x = x / 5</td>
+    </tr>
+    <tr class="pure-table-odd">
+      <td>%=</td>
+      <td>x %= 5</td>
+      <td>x = x % 5</td>
+    </tr>
+    <tr>
+      <td>//=</td>
+      <td>x //= 5</td>
+      <td>x = x // 5</td>
+    </tr>
+    <tr class="pure-table-odd">
+      <td>**=</td>
+      <td>x **= 5</td>
+      <td>x = x ** 5</td>
+    </tr>
+    <tr>
+      <td>&amp;=</td>
+      <td>x &amp;= 5</td>
+      <td>x = x &amp; 5</td>
+    </tr>
+    <tr class="pure-table-odd">
+      <td>|=</td>
+      <td>x |= 5</td>
+      <td>x = x | 5</td>
+    </tr>
+    <tr>
+      <td>^=</td>
+      <td>x ^= 5</td>
+      <td>x = x ^ 5</td>
+    </tr>
+    <tr class="pure-table-odd">
+      <td>&gt;&gt;=</td>
+      <td>x &gt;&gt;= 5</td>
+      <td>x = x &gt;&gt; 5</td>
+    </tr>
+    <tr>
+      <td>&lt;&lt;=</td>
+      <td>x &lt;&lt;= 5</td>
+      <td>x = x &lt;&lt; 5</td>
+    </tr>
+    </tbody>
+   </table>
+</div>
+
+<!---------------------------Identity Operators--------------------->
+<h3>Special Operators</h3>
+<p><strong>is</strong> and <strong>is not</strong> are the identity operators in Python. 
+They are used to check if two values (or variables) are located on the same part of the memory. 
+Two variables that are equal does not imply that they are identical.</p>
+
+<div class="cust-table">
+  <table class="pure-table">
+    <thead>
+        <tr>
+            <th>Operator</th>
+            <th>Meaning</th>
+            <th>Example</th>
+        </tr>
+    </thead>
+    
+    <tbody>
+    <tr>
+      <td>is</td>
+      <td>True if the operands are identical (refer to the same object)</td>
+      <td>x is True</td>
+    </tr>
+    <tr class="pure-table-odd">
+      <td>is not</td>
+      <td>True if the operands are not identical (do not refer to the same object)</td>
+      <td>x is not True</td>
+      </tr>
+    </tbody>
+   </table>
+</div>
+
+<h6>test.py</h6>
+<pre class="language-python line-numbers">
+<code>x_1 = 5
+y_1 = 5
+x_2 = 'Hello'
+y_2 = 'Hello'
+x_3 = [1,2,3]
+y_3 = [1,2,3]
+
+# Output: False
+print(x_1 is not y_1)
+
+# Output: True
+print(x_2 is y_2)
+
+# Output: False
+print(x_3 is y_3)
+</code></pre>
+
+<h6>Output</h6>
+<pre class="language-none">
+<code>False
+True
+False
+</code></pre>
+
+<p>x_1 and y_1 are integers of same values, so they are equal as well as identical. Same is the case with x_2 and y_2 (strings).
+<br>
+But x_3 and y_3 are list. They are equal but not identical. It is because interpreter locates them separately in memory although they are equal.</p>
+
+<!---------------------------Membership Operators-------------------->
+<h3>Membership Operators</h3>
+<p><strong>in</strong> and <strong>not in</strong> are the membership operators in Python. 
+They are used to test whether a value or variable is found in a sequence (string, list, tuple, set and dictionary).</p>
+
+<div class="cust-table">
+  <table class="pure-table">
+    <thead>
+        <tr>
+            <th>Operator</th>
+            <th>Meaning</th>
+            <th>Example</th>
+        </tr>
+    </thead>
+    
+    <tbody>
+    <tr>
+      <td>in</td>
+      <td>True if value/variable is found in the sequence</td>
+      <td>5 in x</td>
+    </tr>
+    <tr class="pure-table-odd">
+      <td>not in</td>
+      <td>True if value/variable is not found in the sequence</td>
+      <td>5 not in x</td>
+      </tr>
+    </tbody>
+   </table>
+</div>
+
+<h6>test.py</h6>
+<pre class="language-python line-numbers">
+<code>x = 'Hello world'
+y = {1:'a',2:'b'}
+
+# Output: True
+print('H' in x)
+
+# Output: True
+print('hello' not in x)
+
+# Output: True
+print(1 in y)
+
+# Output: False
+print('a' in y)
+</code></pre>
+
+<h6>Output</h6>
+<pre class="language-none">
+<code>True
+True
+True
+False
+</code></pre>
