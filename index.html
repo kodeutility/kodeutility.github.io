@@ -1,34 +1,22 @@
----
-layout: page
-title: "Kiran BG"
-description: Portfolio & Tech Blog
-background: '/img/bg_img.jpg'
----
-{% for post in paginator.posts %}
-<div class="post-preview">
-    <a href="{{ post.url | prepend: site.baseurl }}">
-        <h2 class="post-title">
-            {{ post.title }}
-        </h2>
-        {% if post.subtitle %}
-        <h3 class="post-subtitle">
-            {{ post.subtitle }}
-        </h3>
-        {% endif %}
-    </a>
-    <p class="post-meta">Posted <!--by {{ post.author }}--> on {{ post.date | date: "%B %-d, %Y" }}</p>
-</div>
-<hr>
-{% endfor %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Kiran BG</title>
+</head>
+<body>
+    
 
-<!-- Pager -->
-<div class="clearfix">
-    {% if paginator.total_pages > 1 %}
-    {% if paginator.previous_page %}
-        <a class="btn btn-primary float-left" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top">&larr; Newer<span class="d-none d-md-inline"> Posts</span> </a>
-    {% endif %}
-    {% if paginator.next_page %}
-        <a class="btn btn-primary float-right" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top">Older<span class="d-none d-md-inline"> Posts</span> &rarr;</a>
-    {% endif %}
-    {% endif %}
-</div>
+
+
+
+
+
+
+
+
+    <script src="/scripts/script.js"></script>
+</body>
+</html>
