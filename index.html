@@ -3,33 +3,217 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400&display=swap" rel="stylesheet">
+    
+    <!-- Custom Fonts -->
+    <link href="https://use.fontawesome.com/releases/v5.0.3/css/all.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- Bootstrap 4 CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        
+    <!-- Theme CSS -->
     <link rel="stylesheet" href="/css/style.css">
     <title>Kiran BG</title>
 </head>
-<body>
 
-    <header>
-        <nav>
-            <ul class="menu">
-                <li class="item"><a href="#">Home</a></li>
-                <li class="item"><a href="#">About</a></li>
-                <li class="item"><a href="#">Projects</a></li>
-                <li class="item"><a href="#">Resume</a></li>
-                <li class="item"><a href="#">Contact</a></li>
-                <li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
+<body id="page-top">
+
+    <!-- Navigation -->
+    <!--Navbar-->
+    <nav class="navbar navbar-light purple lighten-4 mb-4">
+
+        <!-- Navbar brand -->
+        <a class="navbar-brand" href="#">Kiran BG</a>
+  
+        <!-- Collapse button -->
+        <button class="navbar-toggler toggler-example purple darken-3" type="button" data-toggle="collapse"
+        data-target="#navbarSupportedContent41" aria-controls="navbarSupportedContent41" aria-expanded="false"
+        aria-label="Toggle navigation"><span class="white-text"><i class="fas fa-bars fa-1x"></i></span></button>
+    
+        <!-- Collapsible content -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent41">
+    
+            <!-- Links -->
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#">Features</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#">Pricing</a>
+                </li>
             </ul>
-        </nav>
-        <div class="hero-textbox">
-            <div class="hero-text">
-                <p id="hero-name">Kiran BG</p>
-                <p id="hero-description">Web developer / Programmer</p>
+            <!-- Links -->
+    
+        </div>
+        <!-- Collapsible content -->
+  
+    </nav>
+    <!--/.Navbar-->
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="intro-text">
+                <!--<div class="intro-lead-in">Hey, I'm Matheus</div>-->
+                <h1 class="intro-heading">Full-stack<br/><b>Node JS</b> | <b>React JS</b> <br/>developer</h1>
+                <a href="#services" class="page-scroll btn btn-xl">Tell Me More</a>
             </div>
         </div>
     </header>
 
+    <!-- About Section -->
+    <section id="about" class="bg-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">About Me</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="team-member">
+                        <h4>Kiran BG</h4>
+                        <p class="text-muted">React | React Native | Node JS</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <p class="large text-muted">I have experience in React, Python, VBA. I have automated many tasks using Python & VBA.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Portfolio Grid Section -->
+    <section id="portfolio" class="bg-light-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Portfolio</h2>
+                    <h3 class="section-subheading text-muted">Check out my latest work.</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                        <a href="/portfolio/nodejs-auto-parts-marketplace" class="portfolio-link">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content">
+                                    <i class="fa fa-plus fa-3x"></i>
+                                </div>
+                            </div>
+                            <img src="img/portfolio/qp2ub.jpg" class="img-responsive" alt="QParts2U: Auto Parts Marketplace built with Node.js and Express">
+                        </a>
+                        <div class="portfolio-caption">
+                            <h4>Auto Parts Marketplace</h4>
+                            <p class="text-muted">Node.js</p>
+                        </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="/portfolio/react-clinic-management-system" class="portfolio-link">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/doctor.jpg" class="img-responsive" alt="DoctorBuddy: Web Application Development Project built with React and Parse Server">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Clinic Management System</h4>
+                        <p class="text-muted">React, Parse Server</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="/portfolio/nodejs-travel-magazine" class="portfolio-link">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/route.jpg" class="img-responsive" alt="ROUTE Magazine photography">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Travel Magazine</h4>
+                        <p class="text-muted">Node.js, Payment Integration (Stripe API)</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="/portfolio/react-luxury-hotel-website" class="portfolio-link">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/avalon.jpg" class="img-responsive" alt="Avalon: Web Application Development Project built with React">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Luxury Hotel Website</h4>
+                        <p class="text-muted">React</p>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
+    </section>
 
+    <!-- Footer -->
+    <footer class="page-footer font-small special-color-dark pt-4">
+
+        <!-- Footer Elements -->
+        <div class="container">
+      
+          <!-- Social buttons -->
+          <ul class="list-unstyled list-inline text-center">
+            <li class="list-inline-item">
+              <a class="btn-floating btn-fb mx-1">
+                <i class="fab fa-facebook-f"> </i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a class="btn-floating btn-tw mx-1">
+                <i class="fab fa-twitter"> </i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a class="btn-floating btn-gplus mx-1">
+                <i class="fab fa-google-plus-g"> </i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a class="btn-floating btn-li mx-1">
+                <i class="fab fa-linkedin-in"> </i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a class="btn-floating btn-dribbble mx-1">
+                <i class="fab fa-dribbble"> </i>
+              </a>
+            </li>
+          </ul>
+          <!-- Social buttons -->
+      
+        </div>
+        <!-- Footer Elements -->
+      
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2019 Copyright:
+          <a href="https://kodeutility.github.io"> kodeutility.github.io</a>
+        </div>
+        <!-- Copyright -->
+      
+    </footer>
+    <!-- Footer -->
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="/scripts/script.js"></script>
 </body>
 </html>
