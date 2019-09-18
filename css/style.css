@@ -35,9 +35,9 @@ body {
 }
 
 @media (min-width: 40rem) {
-  .cards_item {
+  /*.cards_item {
     width: 50%;
-  }
+  }*/
 }
 
 @media (min-width: 56rem) {
