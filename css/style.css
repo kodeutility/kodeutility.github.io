@@ -194,6 +194,7 @@ body {
     color: #fed136;
     background-color: white;
   }
+*/
   .btn-xl {
     color: white;
     background-color: #fed136;
@@ -240,7 +241,8 @@ body {
   .btn-xl .badge {
     color: #fed136;
     background-color: white;
-  } */
+  }
+
 /*   .navbar-custom {
     background-color: #222222;
     border-color: transparent;
