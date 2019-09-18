@@ -25,6 +25,7 @@ body {
 .cards_item {
   display: flex;
   padding: 1rem;
+  margin: auto;
 }
 
 @media (min-width: 28rem) {
