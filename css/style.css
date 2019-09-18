@@ -197,8 +197,8 @@ body {
 */
   .btn-xl {
     color: white;
-    background-color: #fed136;
-    border-color: #fed136;
+    background-color: #767676;
+    border-color: #767676;
     font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
     font-weight: 700;
@@ -212,8 +212,8 @@ body {
   .btn-xl.active,
   .open .dropdown-toggle.btn-xl {
     color: white;
-    background-color: #fec503;
-    border-color: #f6bf01;
+    background-color: #484848;
+    border-color: #484848;
   }
   .btn-xl:active,
   .btn-xl.active,
@@ -235,11 +235,11 @@ body {
   .btn-xl.disabled.active,
   .btn-xl[disabled].active,
   fieldset[disabled] .btn-xl.active {
-    background-color: #fed136;
-    border-color: #fed136;
+    background-color: #484848;
+    border-color: #484848;
   }
   .btn-xl .badge {
-    color: #fed136;
+    color: #767676;
     background-color: white;
   }
 
