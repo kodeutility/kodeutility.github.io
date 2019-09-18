@@ -58,7 +58,7 @@ body {
 
 .card_content {
   padding: 1rem;
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background: linear-gradient(-45deg, #23a6d5, #23d5ab);
   animation: gradientBG 15s ease infinite;
   background-size: 400% 400%;
 	
@@ -325,14 +325,14 @@ body {
     text-align: center;
     color: white;
     overflow: hidden;
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-    animation: gradientBG2 15s ease infinite;
+    background: linear-gradient(-45deg, #23a6d5, #23d5ab);
+    animation: gradientBG 15s ease infinite;
     position: relative;
     text-align: center;
     padding-top: 20px;
     padding-bottom: 80px;
   }
-@keyframes gradientBG2 {
+/* @keyframes gradientBG2 {
 	0% {
 		background-position: 0% 50%;
 	}
@@ -342,7 +342,7 @@ body {
 	100% {
 		background-position: 0% 50%;
 	}
-}
+} */
   
   header:before {
     background-position: 50%;
