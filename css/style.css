@@ -404,7 +404,7 @@ body {
     }
   }
   section {
-    padding: 100px 0;
+    padding: 50px 0;
   }
   section h2.section-heading {
     font-size: 40px;
@@ -525,6 +525,9 @@ body {
   }
  
 /* Footer CSS start*/
+section#contact{
+	background-color: #343a40;
+}
 section#contact a {
 	text-decoration: none;
 	color: #fff;
@@ -542,12 +545,13 @@ section#contact ul {
     color: #fff;
 }
 ul.social-icons {
-    margin-top: 10px;
+    margin: auto;
 }
 .social-icons li {
     vertical-align: top;
     display: inline;
     height: 100px;
+    padding:5px;
 }
 .social-icons a {
     color: #fff;
