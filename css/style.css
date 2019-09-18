@@ -120,7 +120,7 @@ body {
     outline: none;
   }
   a {
-    color: #484848;
+    color: #343a40;
   }
   a:hover,
   a:focus,
@@ -197,8 +197,8 @@ body {
 */
   .btn-xl {
     color: white;
-    background-color: #767676;
-    border-color: #767676;
+    background-color: #343a40;
+    border-color: #343a40;
     font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
     font-weight: 700;
@@ -212,8 +212,8 @@ body {
   .btn-xl.active,
   .open .dropdown-toggle.btn-xl {
     color: white;
-    background-color: #484848;
-    border-color: #484848;
+    background-color: #777777;
+    border-color: #777777;
   }
   .btn-xl:active,
   .btn-xl.active,
@@ -235,11 +235,11 @@ body {
   .btn-xl.disabled.active,
   .btn-xl[disabled].active,
   fieldset[disabled] .btn-xl.active {
-    background-color: #484848;
-    border-color: #484848;
+    background-color: #343a40;
+    border-color: #343a40;
   }
   .btn-xl .badge {
-    color: #767676;
+    color: #343a40;
     background-color: white;
   }
 
