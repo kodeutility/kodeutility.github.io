@@ -463,6 +463,9 @@ header .follow a:hover{
     color:#fff;
 }
 
+.contact {
+    min-height:initial;
+}
 .contact .icons-container{
     display: flex;
     gap:1.5rem;
@@ -561,6 +564,8 @@ header .follow a:hover{
     text-align: center;
     color:#666;
     background: #fff;
+    position: sticky;
+    top: 100%;
 }
 
 .footer span{
